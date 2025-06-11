@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" immediate="true" name="identity.post.authn.disclaimer.handler" activate="activate">
+        
+    <implementation class="org.wso2.carbon.identity.post.authn.handler.disclaimer.internal.DisclaimerPostAuthnHandlerServiceComponent"/>
+        
+    <reference name="identity.core.init.event.service" interface="org.wso2.carbon.identity.core.util.IdentityCoreInitializedEvent" cardinality="1..1" policy="dynamic" bind="setIdentityCoreInitializedEventService" unbind="unsetIdentityCoreInitializedEventService"/>
+    
+</scr:component>
