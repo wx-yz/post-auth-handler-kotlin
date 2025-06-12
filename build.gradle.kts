@@ -18,6 +18,15 @@ dependencies {
     implementation("org.apache.felix:org.apache.felix.scr.ds-annotations:1.2.10")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
+    compileOnly("com.ibm.icu:icu4j:70.1")
+}
+
+sourceSets {
+    main {
+        kotlin {
+            srcDir("src/kotlin")
+        }
+    }
 }
 
 tasks.named<Jar>("jar") {
@@ -44,5 +53,8 @@ tasks.named<Jar>("jar") {
             "Specification-Version" to "4.6.4-SNAPSHOT",
             "Tool" to "Bnd-2.1.0.20130426-122213"
         )
+    }
+    from("src/resources/OSGI-INF") {
+        into("OSGI-INF")
     }
 } 
