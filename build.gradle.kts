@@ -37,6 +37,7 @@ tasks.named<Jar>("jar") {
             "Bundle-DocURL" to "http://www.wso2.org",
             "Bundle-License" to "http://www.apache.org/licenses/LICENSE-2.0",
             "Bundle-ManifestVersion" to "2",
+            "DynamicImport-Package" to "*",
             "Bundle-Name" to "org.wso2.carbon.identity.post.authn.handler.disclaimer",
             "Bundle-SymbolicName" to "org.wso2.carbon.identity.post.authn.handler.disclaimer",
             "Bundle-Vendor" to "WSO2",
